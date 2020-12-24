@@ -1,0 +1,355 @@
+* {
+    font-family: 'October Crow';
+    font-size: 30px;
+}
+
+body {
+    height: 900px;
+    background-color: #333333 !important;
+}
+
+.container {
+    overflow: hidden;
+}
+
+.navbar , .navbarAdmin {
+    overflow: hidden;
+    background-color: rgb(184, 161, 117);
+    border-radius: 5px;
+    margin-right: 190px;
+}
+
+.navbar a#logout , .navbarAdmin a#logout{
+    background-color: rgb(221, 85, 85);
+}
+
+.navbar a {
+    float: left;
+    width: calc(100%/5);
+    color: #f2f2f2;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-decoration: none;
+    font-size: 35px;
+    border-radius: 2px;
+}
+
+.navbarAdmin a {
+    float: left;
+    width: calc(100%/6);
+    color: #f2f2f2;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-decoration: none;
+    font-size: 35px;
+    border-radius: 2px;
+}
+
+.navbar a:hover , .navbarAdmin a:hover{
+    background-color: #ddd;
+    color: black;
+}
+
+.navbar a#logout:hover , .navbarAdmin a#logout:hover{
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+.extendedNavbar {
+    width: 100%;
+    padding: 10px 18px;
+    color: #f2f2f2;
+    display: none;
+    overflow: hidden;
+}
+
+.extendedNavbar .selected {
+    background-color: rgb(138, 120, 87);
+}
+
+.extendedNavbar a {
+    width: calc(100%/5);
+    border-color: #ddd;
+}
+
+.extendedNavbar a:hover {
+    background-color: #ddd;
+    color: black;
+    cursor: pointer;
+}
+
+.collapsible {
+    background-color: #777;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: center;
+    outline: none;
+    font-size: 27px;
+}
+
+.collapsible:hover {
+    background-color: #555;
+}
+
+.logoHead {
+    float: left;
+    width: 10%;
+}
+
+.main {
+    background-color: #111;
+    margin-top: 15px;
+    height: 600px;
+    position: relative;
+    overflow: scroll;
+    overflow-x: hidden;
+    border-style: solid;
+    border-color: white;
+    border-radius: 11px;
+}
+
+.autoHeight {
+    height: auto !important;
+    overflow: hidden;
+}
+
+#cheatingPage {
+    height: 692px;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+}
+
+h2 {
+    font-size: 1.25rem;
+    text-align: center;
+    color: white;
+}
+
+.right {
+    float: right
+}
+
+.clickableLabel {
+    text-decoration: underline;
+    color: blue;
+    font-size: 20px;
+    margin-left: 400px;
+}
+
+.clickableLabel:hover {
+    cursor: pointer
+}
+
+.tableStyle {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.itemTable {
+    padding: 5px;
+    border-spacing: 2px;
+    border-collapse: initial;
+}
+
+.itemTable td {
+    background-color: white;
+    cursor: pointer;
+}
+
+.tinyNb {
+    font-size: 15px;
+    z-index: 10;
+    width: 100%;
+    top: 0;
+    left: 0;
+    text-align: right;
+}
+
+.data {
+    font-size: 37px;
+}
+
+#foodTbl, #suggestionsTable th {
+    border-collapse: collapse;
+    font-size: 15px;
+}
+
+#foodTbl th, #suggestionsTable th {
+    position: sticky;
+    top: 0;
+    background-color: #444;
+    color: 555;
+    font-size: 60px !important;
+}
+
+#foodTbl th:hover, #suggestionsTable th:hover {
+    color: white;
+}
+
+#foodBody tr:hover {
+    cursor: pointer;
+    background-color: #555;
+}
+
+.favoriteRow {
+    background-color: #e0b67c;
+}
+
+.btnStyled {
+    cursor: pointer;
+    width: 10%;
+    border-radius: 8px;
+    height: 35px;
+    font-weight: bold;
+    font-size: 15px;
+    margin: 5px;
+}
+
+.btnStyled:hover {
+    background-color: lightcoral;
+    color: seashell;
+}
+
+.login {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    background-color: #e0b67c;
+    margin-top: 40px;
+}
+
+.noBackEntry {
+    width: 100%;
+    font-weight: bold;
+    font-size: 50px;
+    border-style: solid;
+    border-color: black;
+    text-align: center;
+    color: black;
+    margin-bottom: 40px;
+}
+
+.textButton {
+    font-weight: bold;
+    font-size: 70px;
+    border: none;
+    background-color: #e0b67c;
+    text-align: center;
+    color: black;
+    margin-left: 360px;
+}
+
+.textButton:hover {
+    cursor: pointer;
+    color: white;
+}
+
+#loginForm {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.logoText {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 22%;
+}
+
+/*
+######   #######  ##        #######  ########   ######  
+##    ## ##     ## ##       ##     ## ##     ## ##    ## 
+##       ##     ## ##       ##     ## ##     ## ##       
+##       ##     ## ##       ##     ## ########   ######  
+##       ##     ## ##       ##     ## ##   ##         ## 
+##    ## ##     ## ##       ##     ## ##    ##  ##    ## 
+ ######   #######  ########  #######  ##     ##  ######  */
+
+.centerImg {
+    padding-left: 23px;
+}
+
+.center {
+    color: grey;
+    text-align: center;
+}
+
+.name {
+    color: grey;
+    text-align: left;
+}
+
+.cook_time {
+    color: grey;
+    text-align: center;
+}
+
+.hp_value {
+    color: red;
+    text-align: center;
+}
+
+.energy_value {
+    color: yellow;
+    text-align: center;
+}
+
+.sanity_value {
+    color: orange;
+    text-align: center;
+}
+
+.spoil_time {
+    color: grey;
+    text-align: center;
+}
+
+.priority {
+    color: grey;
+    text-align: center;
+}
+
+.vegetables {
+    background-color: #229954 !important;
+}
+
+.fruits {
+    background-color: #5DADE2 !important;
+}
+
+.meats {
+    background-color: #943126 !important;
+}
+
+.fishes {
+    background-color: #154360 !important;
+}
+
+.sweeteners {
+    background-color: #F4D03F !important;
+}
+
+.dairy {
+    background-color: #B2BABB !important;
+}
+
+.bugs {
+    background-color: #873600 !important;
+}
+
+.eggs {
+    background-color: white !important;
+}
+
+.monsters {
+    background-color: #4A235A !important;
+}

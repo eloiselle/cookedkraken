@@ -1,0 +1,15 @@
+
+div.navbarAdmin
+	a(href = "/admin/suggestionsAdmin") Cook
+	a(href = "/admin/inventoryAdmin") Inventory
+	a(href = "/admin/recipesAdmin") Recipes
+	a(href = "/admin/favoritesAdmin") Favorites
+	a(href = "/index") Manage
+
+	a#logout(href = "javascript:void(0);") Logout
+	br
+	div#collNav.extendedNavbar
+	button#collBtn.collapsible() Versions
+	
+script(type='module' src='/scripts/navbar.js')
+script(type="module" src="/scripts/logout.js")

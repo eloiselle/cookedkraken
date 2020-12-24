@@ -1,0 +1,18 @@
+import {expect} from "chai";
+import assert from "assert";
+
+function hello() {return "Hello"}
+
+
+describe('Simple tests', () => {
+
+    it("should pass", () => {})
+
+    it('should return hello', () =>
+        assert.strictEqual(hello(), 'Hello'));
+
+
+    it('chai should work too', () =>
+        expect(hello()).to.equal('Hello'))
+
+});

@@ -1,0 +1,23 @@
+doctype html
+
+html(lang="en")
+	head
+		meta(charset='utf-8')
+		link(rel='stylesheet' href='/../style/style.css' type="text/css")
+
+	block insideHead
+		title Cooked Kraken
+
+	block header
+		include ../partial/header
+	block nav
+		include ../partial/navAdmin
+
+		block content
+			p Could not load content
+
+	block footer
+		footer.footer
+			p Copyright &copy CookedKraken 2020
+script(src="/scripts/filterTable.js")
+script(type="module" src="/scripts/flushUsers.js")

@@ -1,0 +1,1 @@
+invoke-expression 'cmd /c start powershell -Command { npm run dev }';

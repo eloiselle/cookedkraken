@@ -1,0 +1,23 @@
+doctype html
+html
+    head
+        title Login
+        link(rel='stylesheet' href='style/style.css')
+        link(rel='stylesheet' href='style/bootstrap.css')
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+    body
+        img.logoText(id='logo' src='images/CK_text_white.png' style="padding-left:135px;")
+        div.login
+            form#loginForm(action="")
+                input#txtUser.noBackEntry(type="text" placeholder="Username")
+                text#txtUsernameError(style="display: none") Error message
+                br
+                input#txtPassword.noBackEntry(type="password" placeholder="Password")
+                text#txtPasswordError(style="display: none") Error message
+                br
+                input#txtConfirm.noBackEntry(type="password" placeholder="Confirm password")
+                text#txtConfirmError(style="display: none") Error message
+                br
+                button#confirmBtn.btn.btn-dark.btn-block.active Confirm
+    footer
+        script(type="module" src="scripts/register.js")

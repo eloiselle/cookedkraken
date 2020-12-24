@@ -1,0 +1,27 @@
+doctype html
+html
+    head
+        title Login
+        link(rel='stylesheet' href='style/style.css')
+        link(rel="stylesheet" href='style/bootstrap.css')
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+    body
+        img.logoText(id='logo' src='images/CK_text_white.png' style="padding-left:135px;")
+        div.login
+            h1 New survivor
+            form#loginForm(action="")
+                input.noBackEntry(type="text" id="txtUser" placeholder="Username")
+                text#txtUsernameError(style="display: none") Error message
+                br
+                input.noBackEntry(type="password" id="txtPass" placeholder="Password")
+                text#txtPassError(style="display: none") Error message
+                br
+                input.noBackEntry(type="password" id="txtConfirm" placeholder="Confirm password")
+                text#txtConfirmError(style="display: none") Error message
+                br
+                input(type="checkbox" id="adminChk" name="adminChk" value="admin")
+                label(for="adminChk") Make me an admin !
+                br
+                button#submitBtn.btn.btn-primary.btn-lg.active Confirm
+    footer
+        script(type="module" src="scripts/adminAddUser.js")
