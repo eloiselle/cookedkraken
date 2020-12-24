@@ -95,15 +95,17 @@ export function createUserRedirection() {
 async function onSuccesfulLogin(newToken: any, username: any) {
 
   let userData = await fetchFunctions.fetchId.user_name(username)
-  console.log( userData[0].id_permission)
+  console.log(userData[0].id_permission)
   userData[0].id_permission
   sessionStorage.setItem('token', String(newToken))
   sessionStorage.setItem('id_permission', String(userData[0].id_permission))
 
   if (userData[0].id_permission == 1) {
-    window.location.href= '/admin'
-  } else {
-    window.location.href= '/user'
+    window.location.href = '/admin/home_admin'
+  }
+  
+  else {
+    window.location.href = '/user/home_user'
   }
 
 }

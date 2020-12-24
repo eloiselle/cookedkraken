@@ -1,6 +1,5 @@
 import * as fetchFunctions from "./global/fetchFunctions.js"
 import { authenticate } from "../scripts/global/authentication.js"
-import { Alert } from "../js/bootstrap.bundle";
 
 
 onLoad()
@@ -98,6 +97,5 @@ export async function onClickSave() {
       window.location.href = '/index'
     }
   }
-  alert("WTF")
 }
 

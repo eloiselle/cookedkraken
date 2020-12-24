@@ -1,0 +1,19 @@
+block content
+    body
+        div#container.container
+            div#cheatingPage.main
+                - const padding1 = {"width": "25%"}
+                - const padding12 = {"width": "12.5%"}
+
+                div.autoHeight
+                    div.ingredients
+                        h2 Ingredients
+                        table#ingTbl.itemTable
+                            tbody#ingBody
+
+                    div.inventory
+                        h2 My items
+                        table#invTbl.itemTable
+                            tbody#invBody
+    footer
+        script(type="module" src='/scripts/views/tables/InventoryController.js')  

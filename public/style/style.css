@@ -265,6 +265,20 @@ h2 {
     width: 22%;
 }
 
+/* Management page */
+#websiteMap {
+    text-align: center;
+}
+
+#database {
+    text-align: center;
+}
+
+#users {
+    text-align: center;
+}
+
+
 /*
 ######   #######  ##        #######  ########   ######  
 ##    ## ##     ## ##       ##     ## ##     ## ##    ## 

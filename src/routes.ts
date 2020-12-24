@@ -14,34 +14,37 @@ export function routes(app: any) {
   // ██.....██..██.██▄..██.██.......██.
   // ██.....██..██.▀█████▀.█████.████▀.
 
-  app.get("/", (req: Request, resp: Response) => resp.render("index"));
-  app.get("/index", (req: Request, resp: Response) => resp.render("index"));
+  app.get("/", (req: Request, resp: Response) => resp.render("login"));
 
-    app.get("/user", (req: Request, resp: Response) => resp.render("user"));
-    app.get("/admin", (req: Request, resp: Response) => resp.render("admin"));
+  app.get("/user", (req: Request, resp: Response) => resp.render("user"));
+  app.get("/admin", (req: Request, resp: Response) => resp.render("admin"));
 
-    app.get("/login", (req: Request, resp: Response) => resp.render("login"));
-    app.get("/logout", (req: Request, resp: Response) => resp.render("logout"));
+  app.get("/login", (req: Request, resp: Response) => resp.render("login"));
+  app.get("/logout", (req: Request, resp: Response) => resp.render("logout"));
 
   app.get("/register", (req: Request, resp: Response) => resp.render("register"));
 
   app.get("/newUser", (req: Request, resp: Response) => resp.render("adminAddUser"));
 
 
-    // Forms
-    const availablePages: string[] = [
-        //Admin pages
-        "admin/inventoryAdmin",
-        "admin/recipesAdmin",
-        "admin/suggestionsAdmin",
-        "admin/favoritesAdmin",
+  // Forms
+  const availablePages: string[] = [
 
-        //userPages
-        "user/inventory",
-        "user/recipes",
-        "user/suggestions",
-        "user/favorites"
-    ]
+    // Admin pages
+    "admin/favorites_admin",
+    "admin/home_admin",
+    "admin/inventory_admin",
+    "admin/manage_admin",
+    "admin/recipes_admin",
+    "admin/suggestions_admin",
+    
+    // User pages
+    "user/favorites_user",
+    "user/home_user",
+    "user/inventory_user",
+    "user/recipes_user",
+    "user/suggestions_user",
+  ]
 
   availablePages.forEach((page) =>
     app.get("/" + page, (req: Request, resp: Response) => resp.render("forms/" + page))
@@ -57,13 +60,7 @@ export function routes(app: any) {
   app.get("/ping", (req: Request, resp: Response) => resp.send("pong"));
 
   app.get('/json', (req: Request, res: Response) => res.status(200).json({ hello: 'World!', }));
-
-  // Close the server
-  //app.get("/terminate", (req: Request, resp: Response, server: Server) => {
-  //    server.close();
-  //    resp.send("Terminated")
-  //    process.exit(0);
-  //})
+  
 
   // █████▄.▄█████▄.██....██.▄████▄.██.██...██.
   // ██..██.██▀.▀██.███▄▄███.██..██.██.███..██.

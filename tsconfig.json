@@ -12,8 +12,8 @@
         "rootDirs": [ /* Specify the root directory of input files. Use to control the output directory structure with --outDir. */
             "./src"
         ],
-        "allowJs": true, /* Allow javascript files to be compiled. */
-        "jsx": "react", /* Specify JSX code generation: 'preserve', 'react-native', or 'react'. */
+        /*"allowJs": true,  Allow javascript files to be compiled. */
+        /*"jsx": "react",  Specify JSX code generation: 'preserve', 'react-native', or 'react'. */
         "strict": true, /* Enable all strict type-checking options. */
         "noImplicitAny": true, /* Raise error on expressions and declarations with an implied 'any' type. */
         "noImplicitReturns": true, /* Report error when not all code paths in function return a value. */

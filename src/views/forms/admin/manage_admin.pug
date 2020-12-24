@@ -1,0 +1,24 @@
+extends ../../templates/layout_admin
+    
+block content
+    h1 This is the management page
+
+    div#websiteMap
+        h2 Website map
+        ul 
+            li 
+                a(href="/login") Login
+            li
+                a(href="/register") Register
+            li
+                a(href="/admin") Return to webSite
+
+    div#database
+        h2 Database operations
+
+    div#users  
+        h2 Users management
+
+block footer
+    script(type="module" src="/scripts/views/forms/admin/manage_admin.js")
+    script(type="module" src="/scripts/flushUsers.js")
