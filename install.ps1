@@ -1,7 +1,6 @@
 
 $logFile = "./install.log"
 $envFile = "./.env"
-$webpackFile = "./webpack.config.js"
 $encoding = 'UTF8'
 
 $directoriesToCreate = (
@@ -36,10 +35,8 @@ $commands = (
     "npm install serve-favicon @types/serve-favicon",
 
     # Database tools
-    "npm install mariadb",
     "npm install mysql",
     "npm install knex",
-    "npm install knex-mariadb",
 
     # HTML page builder
     "npm install pug",
@@ -55,10 +52,6 @@ $commands = (
     "npm install --save-dev ts-node" ,
     "npm install --save-dev eslint ",
 
-    # Webpack
-    "npm install --save-dev webpack webpack-cli ",
-    "npm install --save-dev ts-loader",
-
     # Testing
     "npm install --save-dev morgan @types/morgan",
     "npm install --save-dev mocha @types/mocha",
@@ -68,8 +61,7 @@ $commands = (
     "npm install --save-dev babel-preset-es2015",
 
     # Init npm
-    "npm init -y",
-    "npm install"
+    "npm init -y"
 )
 
 # .env file
@@ -91,12 +83,12 @@ NODE_ENV=dev
 # Node.js server configuration
 SERVER_PORT=3000
 HOST_URL=http://localhost:3000
-SESSION_SECRET=FGSDh89se0tbw907asdg8
+SESSION_SECRET=
 
 # Database configuration
 DB_HOST=localhost
-DB_USER=ck
-DB_PASSWORD=6d2%:&wR[cV$/knl
+DB_USER=
+DB_PASSWORD=
 DB_NAME=cookedKraken_db
 
 # ================================================================#
@@ -110,32 +102,6 @@ DB_NAME=cookedKraken_db
 # ================================================================#
 "
 
-# webpack.config.js file
-$webpackConfig =
-"
-const path = require('path');
-
-module.exports = {
-  entry: './src/startServer.ts',
-  module: {
-    rules: [
-      {
-        test: /\.tsx?$/,
-        use: 'ts-loader',
-        exclude: /node_modules/,
-      },
-    ],
-  },
-  resolve: {
-    extensions: [ '.tsx', '.ts', '.js' ],
-  },
-  output: {
-    filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist'),
-  },
-};
-"
-
 # Start logging
 Stop-Transcript | out-null
 Start-Transcript -path $logFile -append
@@ -145,9 +111,6 @@ $ErrorActionPreference = "Continue"
 foreach ($directory in $directoriesToCreate) { 
     New-Item -Name $directory -ItemType "directory" -ErrorAction $ErrorActionPreference
 }
-
-# Create webpack.config.js file
-$webpackConfig | Out-File -FilePath $webpackFile -Encoding $encoding
 
 # Create .env file
 $envConfig | Out-File -FilePath $envFile -Encoding $encoding
