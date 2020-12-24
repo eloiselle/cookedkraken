@@ -5,7 +5,16 @@
   "main": "dist/src/startServer.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start:dev": "nodemon dist/src/startServer.js",
+    "build:dev": "tsc --project tsconfig.json --watch --preserveWatchOutput",
+    "node": "node dist/src/startServer.js",
+    "ts-node": "ts-node src/startServer.ts",
+    "dev": "concurrently \"npm:build:dev\" \"npm:start:dev\"",
+    "manual-test": "node dist/src/manual-test.js",
+    "all-tests": "mocha 'test/**/*' --recursive --require ts-node/register --experimental-modules --require esm --exit",
+    "new-tests": "mocha 'test/new/**/*' --recursive --require ts-node/register --experimental-modules --require esm --timeout 60000 --exit",
+    "quick-tests": "mocha 'test/quick/**/*' --recursive --require ts-node/register --experimental-modules --require esm --timeout 60000 --exit",
+    "slow-tests": "mocha 'test/slow/**/*' --recursive --require ts-node/register --experimental-modules --require esm --timeout 60000 --exit"
   },
   "dependencies": {
     "@types/cookie-parser": "^1.4.2",

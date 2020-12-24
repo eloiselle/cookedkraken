@@ -17,7 +17,6 @@ declare module 'chai-http'
 
 // Database
 declare module 'knex'
-declare module 'knex-mariadb'
 declare module 'mysql'
 
 // Encryption and token 

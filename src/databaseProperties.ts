@@ -1,5 +1,4 @@
 import knex from "knex"
-import mdb from "knex-mariadb"
 import dotenv from "dotenv";
 dotenv.config()
 
@@ -11,7 +10,7 @@ const defaultConnection = {
 }
 
 export const DbEnv = knex({
-  client: mdb,
+  client: "mysql",
   connection: defaultConnection,
   pool: { min: 0, max: 7 }
 })

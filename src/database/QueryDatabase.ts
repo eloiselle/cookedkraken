@@ -1,5 +1,4 @@
 import knex from "knex"
-import mdb from "knex-mariadb"
 
 import { createTable } from "./QueryCreateTable.js"
 import { insertData } from "./QueryInsertData.js"
@@ -15,7 +14,7 @@ export async function recreateTables() {
   }
 
   let conn = knex({
-    client: mdb,
+    client: "mysql",
     connection: tempConnection,
     pool: { min: 0, max: 7 }
   })
