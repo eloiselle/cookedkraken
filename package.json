@@ -10,6 +10,8 @@
     "node": "node dist/src/startServer.js",
     "ts-node": "ts-node src/startServer.ts",
     "dev": "concurrently \"npm:build:dev\" \"npm:start:dev\"",
+    "start:prod": "node dist/src/startServer.js",
+    "build:prod": "tsc --project tsconfig.json",
     "manual-test": "node dist/src/manual-test.js",
     "all-tests": "mocha 'test/**/*' --recursive --require ts-node/register --experimental-modules --require esm --exit",
     "new-tests": "mocha 'test/new/**/*' --recursive --require ts-node/register --experimental-modules --require esm --timeout 60000 --exit",
