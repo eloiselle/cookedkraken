@@ -10,7 +10,7 @@
     "node": "node dist/src/startServer.js",
     "ts-node": "ts-node src/startServer.ts",
     "dev": "concurrently \"npm:build:dev\" \"npm:start:dev\"",
-    "start:prod": "pm2 start dist/src/startServer.js --name cookedkraken --watch",
+    "start:prod": "pm2 start dist/src/startServer.js --name cookedkraken",
     "stop:prod": "pm2 stop cookedkraken",
     "build:prod": "tsc --project tsconfig.json",
     "manual-test": "node dist/src/manual-test.js",
