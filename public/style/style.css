@@ -1,99 +1,93 @@
+@font-face { font-family: 'OctoberCrow'; src: url('../fonts/OctoberCrow.ttf') format('truetype'); } 
+
 * {
-    font-family: 'October Crow';
+    font-family: 'OctoberCrow';
     font-size: 30px;
 }
 
 body {
     height: 900px;
-    background-color: #333333 !important;
+    background-color: #333333;
 }
 
 .container {
     overflow: hidden;
 }
 
-.navbar , .navbarAdmin {
-    overflow: hidden;
-    background-color: rgb(184, 161, 117);
-    border-radius: 5px;
-    margin-right: 190px;
+#spanSidenav {
+    color:#f2f2f2;
 }
 
-.navbar a#logout , .navbarAdmin a#logout{
-    background-color: rgb(221, 85, 85);
+.sidenav, .sidenavAdmin {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
 }
 
-.navbar a {
-    float: left;
-    width: calc(100%/5);
-    color: #f2f2f2;
-    text-align: center;
-    padding-top: 15px;
-    padding-bottom: 15px;
+.sidenav a {
+    padding: 8px 8px 8px 32px;
     text-decoration: none;
-    font-size: 35px;
-    border-radius: 2px;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
 }
 
-.navbarAdmin a {
-    float: left;
-    width: calc(100%/6);
-    color: #f2f2f2;
-    text-align: center;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    text-decoration: none;
-    font-size: 35px;
-    border-radius: 2px;
-}
-
-.navbar a:hover , .navbarAdmin a:hover{
-    background-color: #ddd;
-    color: black;
-}
-
-.navbar a#logout:hover , .navbarAdmin a#logout:hover{
-    background-color: rgb(255, 255, 255);
-    color: black;
-}
-
-.extendedNavbar {
-    width: 100%;
-    padding: 10px 18px;
-    color: #f2f2f2;
-    display: none;
-    overflow: hidden;
-}
-
-.extendedNavbar .selected {
-    background-color: rgb(138, 120, 87);
-}
-
-.extendedNavbar a {
-    width: calc(100%/5);
-    border-color: #ddd;
-}
-
-.extendedNavbar a:hover {
-    background-color: #ddd;
-    color: black;
-    cursor: pointer;
-}
-
-.collapsible {
-    background-color: #777;
+.sidenav a .selected {
     color: white;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    border: none;
-    text-align: center;
-    outline: none;
-    font-size: 27px;
+    background-color: rgb(84, 89, 155);
 }
 
-.collapsible:hover {
-    background-color: #555;
+.sidenav h1 {
+    padding: 32px 8px 8px 32px;
+    text-decoration: none;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.sidenav #versionsContainer .selected {
+    color: white;
+    background-color: rgb(84, 89, 155);
+}
+
+.sidenav #versionsContainer a {
+    border-color: #ddd;
+    display: block;
+}
+
+.sidenav #versionsContainer a:hover {
+    background-color: #ddd;
+    color: black;
+    cursor: pointer;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
 }
 
 .logoHead {
@@ -266,6 +260,7 @@ h2 {
 }
 
 /* Management page */
+
 #websiteMap {
     text-align: center;
 }
@@ -277,7 +272,6 @@ h2 {
 #users {
     text-align: center;
 }
-
 
 /*
 ######   #######  ##        #######  ########   ######  
