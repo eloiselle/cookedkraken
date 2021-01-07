@@ -18,6 +18,7 @@ declare module 'chai-http'
 // Database
 declare module 'knex'
 declare module 'mysql'
+declare module 'nconf'
 
 // Encryption and token 
 declare module 'bcrypt'

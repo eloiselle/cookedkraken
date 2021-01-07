@@ -1,15 +1,15 @@
+script(type="module" src="/scripts/views/partial/navbar.js")
+script(type="module" src="/scripts/logout.js")
 
-div.navbarAdmin
+span(style="font-size:30px;cursor:pointer" id="spanSidenav" class="openbtn") ☰ Menu
+div.sidenav#userSideNav
+	h1 Pages
+	a(href="javascript:void(0)" class="closebtn") ×
 	a(href = "/admin/suggestions_admin") Cook
 	a(href = "/admin/inventory_admin") Inventory
 	a(href = "/admin/recipes_admin") Recipes
 	a(href = "/admin/favorites_admin") Favorites
 	a(href = "/admin/manage_admin") Manage
-
 	a#logout(href = "javascript:void(0);") Logout
-	br
-	div#collNav.extendedNavbar
-	button#collBtn.collapsible() Versions
-	
-script(type='module' src='/scripts/navbar.js')
-script(type="module" src="/scripts/logout.js")
+	h1 Versions
+	div(id="versionsContainer")

@@ -888,9 +888,8 @@ export module insertData {
   export function user() {
 
     const data: User[] = [
-      new User({ username: "DeltaHit", password: "$2b$10$NhTkMn/kUh/Awx4LgjL2aehftNrFP0JLnXW8hSalavDlkdRGXGnNm", id_permission: 1 }),
-      new User({ username: "incheap", password: "$2b$10$JxsHLaA8qdtx2FMdi0MK9OZaocOvzcpnTGrc0l9DfgoCGxKIz7/WC", id_permission: 1 }),
-      new User({ username: "Cortex", password: "$2b$10$kx/gsXzp9ounNjfDNMeO6etqJQ/PvVK3q3aQqWC7NLYLjzrjdH6H2", id_permission: 2 }),
+      new User({ username: "Admin", password: "$2b$10$NhTkMn/kUh/Awx4LgjL2aehftNrFP0JLnXW8hSalavDlkdRGXGnNm", id_permission: 1 }),
+      new User({ username: "User", password: "$2b$10$kx/gsXzp9ounNjfDNMeO6etqJQ/PvVK3q3aQqWC7NLYLjzrjdH6H2", id_permission: 2 }),
     ]
 
     return DbEnv('user').insert(data)
