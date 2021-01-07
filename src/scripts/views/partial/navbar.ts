@@ -1,28 +1,31 @@
-import * as fetchFunctions from "../../global/fetchFunctions"
-import { filterTable } from "../../global/VersionController"
+import * as fetchFunctions from "../../global/fetchFunctions.js"
+import { filterTable } from "../../global/VersionController.js"
+
 
 onLoad()
 
 
-async function bindInputs() {
-  document.getElementById("collBtn")?.addEventListener('click', extendNavbar);
-}
+function bindInputs() {
 
-function extendNavbar() {
-  let collN = document.getElementById("collNav") as HTMLElement;
+  let openBtn = document.querySelector('.openbtn')
+  openBtn!.addEventListener('click', event => {
+    console.log("Big")
+    document.getElementById("userSideNav")!.style.width = "250px";
+  });
 
-  if (collN.style.display == "block") {
-    collN.style.display = "none";
-  } else {
-    collN.style.display = "block";
-  }
+  let closeBtn = document.querySelector('.closebtn')
+  closeBtn!.addEventListener('click', event => {
+    console.log("Smol")
+    document.getElementById("userSideNav")!.style.width = "0";
+  });
 }
 
 export async function onLoad() {
+
   bindInputs()
 
   let versions = await fetchFunctions.fetchAll.version()
-  let collNav = document.getElementById("collNav") as HTMLElement
+  let versionsContainer = document.getElementById("versionsContainer")
 
   for (let i in versions) {
     let btnNewVersion = document.createElement("a")
@@ -33,7 +36,6 @@ export async function onLoad() {
       filterTable()
     })
 
-    collNav?.appendChild(btnNewVersion)
+    versionsContainer?.appendChild(btnNewVersion)
   }
 }
-

@@ -1,12 +1,14 @@
+script(type="module" src="/scripts/views/partial/navbar.js")
+script(type="module" src="/scripts/logout.js")
 
-div.navbar
+span(style="font-size:30px;cursor:pointer" id="spanSidenav" class="openbtn") ☰ Menu
+div.sidenav#userSideNav
+	h1 Pages
+	a(href="javascript:void(0)" class="closebtn") ×
 	a(href = "/user/suggestions_user") Cook
 	a(href = "/user/inventory_user") Inventory
 	a(href = "/user/recipes_user") Recipes
 	a(href = "/user/favorites_user") Favorites
 	a#logout(href = "javascript:void(0);") Logout
-	br
-	div#collNav.extendedNavbar
-	button#collBtn.collapsible() Versions
-script(type='module' src='/scripts/navbar.js')
-script(type="module" src="/scripts/logout.js")
+	h1 Versions
+	div(id="versionsContainer")
