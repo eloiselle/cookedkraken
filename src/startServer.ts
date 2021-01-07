@@ -72,7 +72,7 @@ if (env == "prod") {
   let credentials = { key: privateKey, cert: certificate };
 
   let httpsServer = https.createServer(credentials, app);
-  httpsServer.listen(port, () => console.log(`Server running on https://eloiselle.tech${port}`));
+  httpsServer.listen(port, () => console.log(`Server running on https://eloiselle.tech:${port}`));
 } else { 
   app.listen(port, () => console.log(`Server running on http://localhost:${port}`));
 }
