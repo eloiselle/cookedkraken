@@ -18,6 +18,7 @@ import { routes } from "./routes.js";
 import path from "path";
 import fs from "fs";
 import dotenv from "dotenv";
+import https from "https"
 dotenv.config()
 
 
@@ -64,5 +65,14 @@ app = routes(app); //register the routes
 // ...██...██...██..██.██..██...██...
 // ████▀...██...██..██.██..██...██...
 
-app.listen(port, () => console.log(`Server running on http://localhost:${port}`));
-//module.exports = app
+// Load the SSL certificate when in production
+if (process.env.NODE_ENV == "prod") {
+  let privateKey = fs.readFileSync('private.key', 'utf8');
+  let certificate = fs.readFileSync('eloiselle_tech.crt', 'utf8');
+  let credentials = { key: privateKey, cert: certificate };
+
+  let httpsServer = https.createServer(credentials, app);
+  httpsServer.listen(port, () => console.log(`Server running on https://eloiselle.tech${port}`));
+} else {
+  app.listen(port, () => console.log(`Server running on http://localhost:${port}`));
+}
