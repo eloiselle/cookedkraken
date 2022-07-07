@@ -1,2 +1,2 @@
 # Cooked Kraken
- A cookbook app for Don't Starve
+ A cookbook app for the game "Don't Starve"
